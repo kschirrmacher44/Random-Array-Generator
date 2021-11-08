@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Random Number Array Generator</h1>
+<div class="inputContainer">
+<div class="input">
+    <label for="arrayLenth">Array Length:</label>
+    <input type="number" id="arrayLength" name="arrayLength" onchange="fillArray()" step="1" />
+    </div>
+    <div class="input">
+        <label for="arrayLow">Low Boundary:</label>
+    <input type="number" id="arrayLow" name="arrayLow" onchange="fillArray()" step="1" />
+    </div>
+    <div class="input">
+        <label for="arrayHigh">High Boundary:</label>
+    <input type="number" id="arrayHigh" name="arrayHigh" onchange="fillArray()" step="1" />
+    </div>
+    </div>
+    
+    <div class="radioButtonContainer">
+    <p class="radioGroupLabel">Order of array:</p>
+    <div class="firstRadioButton">
+    <input onchange="fillArray()" type="radio" name="ordering" value="random" checked />
+    <label for="random">Random</label>
+    </div>
+    <div>
+    <input onchange="fillArray()" type="radio" name="ordering" value="smallestToLargest"/>
+    <label for="smallestToLargest">Smallest to Largest</label>
+    </div>
+    <div>
+    <input onchange="fillArray()" type="radio" name="ordering" value="largestToSmallest"/>
+    <label for="largestToSmallest">Largest to smallest</label>
+    </div>
+    </div>
+
+    <p id="integerText"></p>
+    <p id="resultsText" hidden>Results: <span id="resultsArray" onClick="copyToClipboard()"></span></p>
+    <p id="arrayLengthText"></p>
+    <p id="copyText"></p>
+
+    
+</body>
+
+<script type="text/javascript" src="index.js"></script>
+
+</html>
